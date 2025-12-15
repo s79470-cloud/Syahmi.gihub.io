@@ -1,1 +1,1 @@
-# Syahmi.gihub.io
+# Syahmi.github.io
