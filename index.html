@@ -130,8 +130,27 @@
         /* Card 6 (Playlist): Wide box at the bottom (4x1) */
         .card-playlist {
             grid-column: 1 / -1; /* Spans all columns (4) */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
+        /* Button Style */
+        .back-button {
+            background-color: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: opacity 0.2s ease;
+        }
+
+        .back-button:hover {
+            opacity: 0.9;
+        }
+
         /* Social Links styling for Card 1 */
         .social-links a {
             color: var(--color-accent);
@@ -158,6 +177,12 @@
                 grid-row: auto;
             }
             
+            .card-playlist {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
             body {
                 padding: var(--spacing); /* Maintain spacing */
             }
@@ -222,9 +247,12 @@
             </div>
 
             <div class="bento-card card-playlist">
-                <p class="card-title">🎧 Study Soundtrack</p>
-                <span class="accent-text" style="font-size: 1.2em;">Ambient Lo-Fi & Instrumental Focus</span>
-                <p class="card-text">Placeholder for an embedded music player (e.g., Spotify, YouTube embed).</p>
+                <div>
+                    <p class="card-title">🎧 Study Soundtrack</p>
+                    <span class="accent-text" style="font-size: 1.2em;">Ambient Lo-Fi & Instrumental Focus</span>
+                    <p class="card-text">Music to stay productive.</p>
+                </div>
+                <a href="https://s79470-cloud.github.io/focus-timer-app/app.html" class="back-button">Focus Timer App →</a>
             </div>
             
         </div>
